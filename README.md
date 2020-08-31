@@ -7,11 +7,15 @@ That is a simple project to manage a to do list
 |---        |---                          |
 |tests      |![run-tests][tests-badge]    |
 |build      |![run-build][build-badge]    |
-|deploy     |![deploy-badge][deploy-badge]|                        |
+|deploy     |![deploy-badge][deploy-badge]|
 
 ## to run
 ```sh
 yarn && yarn dev
+```
+>or
+```sh
+yarn && yarn build && yarn start
 ```
 
 ## simple entity diagram
