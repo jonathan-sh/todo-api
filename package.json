@@ -9,7 +9,7 @@
     "dev": "nodemon",
     "test": "jest --detectOpenHandles test",
     "build": "tsc -p .",
-    "start": "tsc -p . && node build/src",
+    "start": "node build/src",
     "eslint": "eslint . --ext .ts --fix"
   },
   "dependencies": {
