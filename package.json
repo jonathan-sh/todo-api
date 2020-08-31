@@ -1,0 +1,67 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "simple task manager",
+  "main": "index.js",
+  "author": "jonathan-sh",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "jest --detectOpenHandles test",
+    "build": "tsc -p .",
+    "start": "tsc -p . && node build/src",
+    "eslint": "eslint . --ext .ts --fix"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.7",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.2",
+    "ts-mongoose": "^0.0.21"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/express": "^4.17.1",
+    "@types/jasmine": "^3.5.14",
+    "@types/jest": "^24.9.1",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/lodash": "^4.14.161",
+    "@types/mongodb": "^3.1.22",
+    "@types/mongoose": "5.5.21",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3",
+    "jest": "^24.9.0",
+    "lint-staged": "^10.0.10",
+    "nodemon": "^2.0.4",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "yarn test --findRelatedTests --bail",
+      "git add"
+    ]
+  }
+}
